@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FlashCardList from './FlashCardList';
+import AddButton from './AddButton';
 
 class App extends Component {
   state = { FlashCards: [
@@ -21,6 +22,7 @@ class App extends Component {
     return (
       <div>
         <h1>Flash Cards</h1>
+        <AddButton addButton={this.state}/>
         <FlashCardList  flashCards={this.state.FlashCards}
          deleteCard={this.deleteFlashCard}
          />
